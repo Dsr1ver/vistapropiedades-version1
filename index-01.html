@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista Propiedades | Tu Hogar en Atacama</title>
+    <meta
+      name="description"
+      content="Inmobiliaria en Atacama especializada en la venta y arriendo de propiedades en Copiapó, Caldera y Bahía Inglesa. Encuentra tu próximo hogar con nosotros."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container container-header">
+        <div class="logo">
+          <span class="logo-icon"
+            ><i class="fa-solid fa-house-chimney"></i
+          ></span>
+          <h1>VISTA PROPIEDADES</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#" class="active">INICIO</a></li>
+            <li><a href="#propiedades">COMPRAR</a></li>
+            <li><a href="#propiedades">ARRENDAR</a></li>
+            <li><a href="#info">QUIÉNES SOMOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="hero-section"
+        style="background-image: url(&quot;imagenes/hero_imagen.jpg&quot;)"
+      >
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h2>Encuentra tu próximo hogar</h2>
+            <p>Venta y Arriendo de Propiedades en Atacama</p>
+          </div>
+          <div class="carousel-controls">
+            <button id="prevBtn" class="carousel-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="nextBtn" class="carousel-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="propiedades" class="properties-section">
+        <div class="container">
+          <div class="filter-controls">
+            <h3>Filtrar por:</h3>
+            <div class="filter-group">
+              <select id="tipoFiltro">
+                <option value="todos">Todos los Tipos</option>
+                <option value="venta">Venta</option>
+                <option value="arriendo">Arriendo</option>
+              </select>
+              <select id="sectorFiltro">
+                <option value="todos">Todos los Sectores</option>
+                <option value="Copiapó">Copiapó</option>
+                <option value="Caldera">Caldera</option>
+                <option value="Bahía Inglesa">Bahía Inglesa</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="lista-propiedades" class="properties-grid"></div>
+        </div>
+      </section>
+
+      <section id="info" class="info-section">
+        <div class="container">
+          <div class="info-content">
+            <div class="info-image">
+              <img
+                src="imagenes/oficina.jpg"
+                alt="Oficina de Vista Propiedades en Atacama"
+              />
+            </div>
+            <div class="info-text">
+              <h2>Quiénes Somos</h2>
+              <p>
+                En Vista Propiedades, somos expertos locales dedicados a
+                conectar personas con sus hogares ideales en la Región de
+                Atacama. Con años de experiencia en Copiapó, Caldera y sus
+                alrededores, ofrecemos un servicio transparente, profesional y
+                personalizado para todas tus necesidades inmobiliarias.
+              </p>
+              <a href="#contacto" class="btn-primary">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <h3>Contacto</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Calle Ejemplo #123,
+            Copiapó, Chile
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +56 9 XXXX XXXX</p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> contacto@vistapropiedades.cl
+          </p>
+        </div>
+        <div class="footer-form">
+          <h3>Envíanos un mensaje</h3>
+          <form>
+            <input type="text" placeholder="Tu Nombre" required />
+            <input type="email" placeholder="Tu Email" required />
+            <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+            <button type="submit" class="btn-secondary">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2023 Vista Propiedades. Todos los derechos reservados. | Sitio
+          Estático Optimizado.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
