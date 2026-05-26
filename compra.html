@@ -19,6 +19,18 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="main-header header-static">
@@ -32,8 +44,9 @@
         <nav class="main-nav">
           <ul>
             <li><a href="index-01.html">INICIO</a></li>
-            <li><a href="#propiedades">COMPRAR</a></li>
-            <li><a href="#propiedades">ARRENDAR</a></li>
+            <li><a href="compra.html" class="active">Compra</a></li>
+            <li><a href="arriendo.html">Arriendo</a></li>
+            <li><a href="venta.html">Venta</a></li>
             <li><a href="quienessomos.html">QUIÉNES SOMOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
           </ul>
@@ -42,26 +55,48 @@
     </header>
 
     <main>
-      <section id="info" class="info-section">
-        <div class="container">
-          <div class="info-content">
-            <div class="info-image">
-              <img
-                src="imagenes/imagen-trabajador.jpg"
-                alt="Oficina de Vista Propiedades en Atacama"
-              />
-            </div>
-            <div class="info-text">
-              <h2>Servicio de Compra</h2>
-              <p>
-                En Vista Propiedades, somos expertos locales dedicados a
-                conectar personas con sus hogares ideales en la Región de
-                Atacama. Con años de experiencia en Copiapó, Caldera y sus
-                alrededores, ofrecemos un servicio transparente, profesional y
-                personalizado para todas tus necesidades inmobiliarias.
-              </p>
-              <a href="#contacto" class="btn-primary">Contáctanos</a>
-            </div>
+      <section id="compra" class="compra-section">
+        <div class="container compra-container">
+          <h2>Compra con Seguridad</h2>
+          <p class="compra-intro">
+            Comprar una propiedad es uno de los pasos más importantes en la
+            vida. En <strong>Vista Propiedades</strong>, te brindamos una
+            asesoría integral para que tu inversión en la Región de Atacama sea
+            segura, transparente y sin sorpresas.
+          </p>
+
+          <ul class="lista-servicios">
+            <li>
+              <strong>Búsqueda personalizada:</strong> Filtramos las mejores
+              opciones en Copiapó, Caldera y Bahía Inglesa.
+            </li>
+            <li>
+              <strong>Visitas guiadas:</strong> Coordinamos visitas presenciales
+              evaluando el estado real del inmueble.
+            </li>
+            <li>
+              <strong>Análisis legal preventivo:</strong> Revisamos títulos y
+              situación jurídica antes de cualquier firma.
+            </li>
+            <li>
+              <strong>Gestión documental:</strong> Coordinamos todo el papeleo
+              en notarías y conservadores.
+            </li>
+            <li>
+              <strong>Negociación experta:</strong> Actuamos como tus
+              intermediarios para asegurar el mejor precio.
+            </li>
+          </ul>
+          <div class="quienes-imagen">
+            <img
+              src="imagenes/compracasa.jpg"
+              alt="Equipo de Vista Propiedades"
+            />
+          </div>
+          <div class="btn-container">
+            <a href="#contacto" class="btn-primary"
+              >Quiero asesoría para comprar</a
+            >
           </div>
         </div>
       </section>

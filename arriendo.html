@@ -19,6 +19,18 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="main-header header-static">
@@ -33,7 +45,7 @@
           <ul>
             <li><a href="index-01.html">INICIO</a></li>
             <li><a href="compra.html">Compra</a></li>
-            <li><a href="arriendo.html">Arriendo</a></li>
+            <li><a href="arriendo.html" class="active">Arriendo</a></li>
             <li><a href="venta.html">Venta</a></li>
             <li><a href="quienessomos.html">QUIÉNES SOMOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
@@ -43,26 +55,50 @@
     </header>
 
     <main>
-      <section id="info" class="info-section">
-        <div class="container">
-          <div class="info-content">
-            <div class="info-image">
-              <img
-                src="imagenes/imagen-trabajador.jpg"
-                alt="Oficina de Vista Propiedades en Atacama"
-              />
-            </div>
-            <div class="info-text">
-              <h2>Quiénes Somos</h2>
-              <p>
-                En Vista Propiedades, somos expertos locales dedicados a
-                conectar personas con sus hogares ideales en la Región de
-                Atacama. Con años de experiencia en Copiapó, Caldera y sus
-                alrededores, ofrecemos un servicio transparente, profesional y
-                personalizado para todas tus necesidades inmobiliarias.
-              </p>
-              <a href="#contacto" class="btn-primary">Contáctanos</a>
-            </div>
+      <section id="arriendo" class="arriendo-section">
+        <div class="container arriendo-container">
+          <h2>Arriendos Seguros</h2>
+          <p class="arriendo-intro">
+            En <strong>Vista Propiedades</strong>, conectamos a propietarios con
+            arrendatarios responsables. Gestionamos el proceso de arriendo con
+            un enfoque riguroso, asegurando que tu propiedad en la Región de
+            Atacama sea administrada con el máximo cuidado y formalidad.
+          </p>
+
+          <ul class="lista-servicios">
+            <li>
+              <strong>Selección rigurosa:</strong> Evaluamos antecedentes
+              comerciales y laborales de cada postulante.
+            </li>
+            <li>
+              <strong>Contratos profesionales:</strong> Redactamos contratos
+              blindados legalmente para tu tranquilidad.
+            </li>
+            <li>
+              <strong>Inventario detallado:</strong> Documentamos el estado de
+              tu propiedad mediante registros fotográficos y escritos.
+            </li>
+            <li>
+              <strong>Gestión de pagos:</strong> Supervisamos la puntualidad en
+              los pagos de arriendo y gastos comunes.
+            </li>
+            <li>
+              <strong>Atención rápida:</strong> Actuamos como puente directo
+              ante cualquier requerimiento de mantención.
+            </li>
+          </ul>
+
+          <div class="quienes-imagen">
+            <img
+              src="imagenes/arriendo.jpg"
+              alt="Equipo de Vista Propiedades"
+            />
+          </div>
+
+          <div class="btn-container">
+            <a href="#contacto" class="btn-primary"
+              >Quiero arrendar mi propiedad</a
+            >
           </div>
         </div>
       </section>
