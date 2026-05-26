@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detalle de Propiedad</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header header-static">
+      <div class="container container-header">
+        <div class="logo">
+          <span class="logo-icon"
+            ><i class="fa-solid fa-house-chimney"></i
+          ></span>
+          <h1>VISTA PROPIEDADES</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index-01.html">INICIO</a></li>
+            <li><a href="compra.html">Compra</a></li>
+            <li><a href="arriendo.html">Arriendo</a></li>
+            <li><a href="venta.html">Venta</a></li>
+            <li><a href="quienessomos.html">QUIÉNES SOMOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="detalle-container container">
+      <div class="detalle-grid">
+        <div class="detalle-imagen">
+          <img id="imagen" src="" alt="Propiedad" />
+        </div>
+        <div class="detalle-info">
+          <h1 id="titulo"></h1>
+          <p id="precio" class="precio-destacado"></p>
+          <p id="descripcion"></p>
+          <a href="index-01.html" class="btn-primary">Volver al Inicio</a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contacto" class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <h3>Contacto</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Calle Ejemplo #123,
+            Copiapó, Chile
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +56 9 XXXX XXXX</p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> contacto@vistapropiedades.cl
+          </p>
+        </div>
+        <div class="footer-form">
+          <h3>Envíanos un mensaje</h3>
+          <form>
+            <input type="text" placeholder="Tu Nombre" required />
+            <input type="email" placeholder="Tu Email" required />
+            <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+            <button type="submit" class="btn-secondary">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2023 Vista Propiedades. Todos los derechos reservados. | Sitio
+          Estático Optimizado.
+        </p>
+      </div>
+    </footer>
+    <script src="detalle.js"></script>
+  </body>
+</html>

@@ -15,8 +15,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* estoy probadn con Lexend y Rethink Sans (esta me gusta mas)*/
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lexend", sans-serif;
   color: var(--black);
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -33,6 +35,7 @@ ul {
 h1,
 h2,
 h3 {
+  font-family: "Rethink Sans", sans-serif;
   font-weight: 700;
   color: var(--primary-blue);
 }
@@ -45,15 +48,30 @@ h3 {
 }
 
 /* 1. CABECERA FLOTANTE (Basado en la imagen) */
+/* Header para el Home (Flotante) */
 .main-header {
-  position: absolute; /* Para que flote sobre el hero */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   padding: 20px 0;
   color: var(--white);
-  background: transparent; /* Fondo transparente inicialmente */
+  background: transparent;
+  transition: var(--transition);
+}
+
+/* Header para otras páginas (Estático y con fondo azul) */
+.header-static {
+  position: relative !important;
+  background: var(--primary-blue) !important;
+  color: var(--white);
+  border-bottom: 2px solid var(--secondary-blue);
+}
+
+/* Ajuste para que el logo se vea bien en fondo azul */
+.header-static .logo h1 {
+  color: var(--white);
 }
 
 .container-header {
@@ -95,6 +113,7 @@ h3 {
 
 /* 2. SECCIÓN HERO / BANNER PRINCIPAL (Basado en la imagen) */
 .hero-section {
+  background-image: url("imagenes/imagen-hero1.jpeg");
   position: relative;
   height: 100vh; /* Ocupa todo el alto de la pantalla */
   background-size: cover;
@@ -132,7 +151,20 @@ h3 {
   font-weight: 400;
   opacity: 0.9;
 }
+.hero-section {
+  transition: background-image 1s ease-in-out;
+}
 
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  /* ESTO ES LO QUE SOLUCIONA EL COLOR GRIS: */
+  background-color: var(--primary-blue); /* Color sólido mientras carga */
+  background-image: url("imagenes/imagen-hero1.jpeg"); /* IMAGEN POR DEFECTO */
+  transition: background-image 1s ease-in-out;
+}
 /* Controles y Puntos del Carrusel (Basado en la imagen) */
 .carousel-controls {
   position: absolute;
@@ -357,4 +389,56 @@ h3 {
 .btn-secondary:hover {
   background-color: var(--white);
   color: var(--secondary-blue);
+}
+
+@media (max-width: 768px) {
+  .info-content {
+    grid-template-columns: 1fr;
+  }
+  .main-nav ul {
+    display: none;
+  } /* Aquí podrías implementar un menú hamburguesa */
+}
+
+.property-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Contenedor principal de detalle */
+.detalle-container {
+  padding: 100px 0;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 40px;
+  align-items: start;
+}
+
+/* Control de la imagen para que no sea gigante */
+.detalle-imagen img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.precio-destacado {
+  font-size: 1.5rem;
+  color: var(--secondary-blue);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive: Si la pantalla es pequeña, una sola columna */
+@media (max-width: 768px) {
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
 }
