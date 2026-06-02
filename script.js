@@ -164,6 +164,19 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(nextImage, 5000);
   }
 
+  // (renderizar, filtrar, carrusel, etc.)
+
+  // --- NUEVO: LÓGICA MENÚ HAMBURGUESA ---
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".main-nav");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+  }
+
   // --- CARGA INICIAL ---
   renderizar(propiedades);
 });

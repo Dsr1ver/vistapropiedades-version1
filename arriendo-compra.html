@@ -31,6 +31,12 @@
       href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="main-header header-static">
@@ -41,12 +47,18 @@
           ></span>
           <h1>VISTA PROPIEDADES</h1>
         </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
         <nav class="main-nav">
           <ul>
             <li><a href="index-01.html">INICIO</a></li>
-            <li><a href="compra.html" class="active">Compra</a></li>
-            <li><a href="arriendo.html">Arriendo</a></li>
-            <li><a href="venta.html">Venta</a></li>
+            <li><a href="arriendo-compra.html">Compra o Arrienda</a></li>
+            <li><a href="venta.html">Vende tu propiedad</a></li>
             <li><a href="quienessomos.html">QUIÉNES SOMOS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
           </ul>
@@ -55,6 +67,54 @@
     </header>
 
     <main>
+      <section id="arriendo" class="arriendo-section">
+        <div class="container arriendo-container">
+          <h2>Arriendos Seguros</h2>
+          <p class="arriendo-intro">
+            En <strong>Vista Propiedades</strong>, conectamos a propietarios con
+            arrendatarios responsables. Gestionamos el proceso de arriendo con
+            un enfoque riguroso, asegurando que tu propiedad en la Región de
+            Atacama sea administrada con el máximo cuidado y formalidad.
+          </p>
+
+          <ul class="lista-servicios">
+            <li>
+              <strong>Selección rigurosa:</strong> Evaluamos antecedentes
+              comerciales y laborales de cada postulante.
+            </li>
+            <li>
+              <strong>Contratos profesionales:</strong> Redactamos contratos
+              blindados legalmente para tu tranquilidad.
+            </li>
+            <li>
+              <strong>Inventario detallado:</strong> Documentamos el estado de
+              tu propiedad mediante registros fotográficos y escritos.
+            </li>
+            <li>
+              <strong>Gestión de pagos:</strong> Supervisamos la puntualidad en
+              los pagos de arriendo y gastos comunes.
+            </li>
+            <li>
+              <strong>Atención rápida:</strong> Actuamos como puente directo
+              ante cualquier requerimiento de mantención.
+            </li>
+          </ul>
+
+          <div class="quienes-imagen">
+            <img
+              src="imagenes/arriendo.jpg"
+              alt="Equipo de Vista Propiedades"
+            />
+          </div>
+
+          <div class="btn-container">
+            <a href="index-01.html#propiedades" class="btn-primary"
+              >Ir a seleccionar una propiedad</a
+            >
+          </div>
+        </div>
+      </section>
+
       <section id="compra" class="compra-section">
         <div class="container compra-container">
           <h2>Compra con Seguridad</h2>
@@ -94,8 +154,8 @@
             />
           </div>
           <div class="btn-container">
-            <a href="#contacto" class="btn-primary"
-              >Quiero asesoría para comprar</a
+            <a href="index-01.html#propiedades" class="btn-primary"
+              >Ir a seleccionar una propiedad</a
             >
           </div>
         </div>
@@ -132,6 +192,14 @@
         </p>
       </div>
     </footer>
+    <a
+      href="https://wa.me/569XXXXXXXX?text=Hola!%20Vi%20Vista%20Propiedades%20y%20me%20gustaría%20más%20información"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-text">Contáctanos</span>
+    </a>
 
     <script src="script.js"></script>
   </body>

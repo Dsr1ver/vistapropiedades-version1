@@ -549,6 +549,77 @@ h3 {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px; /* Más ancho para que quepa el texto */
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el logo y el texto */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-text {
+  font-family: "Rethink Sans", sans-serif; /* Usamos tu tipografía */
+}
+
+/* Ajuste del contenedor del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espacio entre el logo y el texto */
+}
+
+/* Tamaño controlado para tu logo */
+.logo-img {
+  height: 55px; /* Ajusta este valor según el tamaño real de tu logo */
+  width: auto;
+  display: block;
+}
+
+/* Asegurar que el título no sea demasiado grande si el logo es alto */
+.logo h1 {
+  font-size: 1.2rem; /* Un poco más pequeño para que no compita con el logo */
+  line-height: 1.2;
+}
+
+/* Opcional: si quieres que el logo sea un enlace que lleve al inicio */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para escritorio (por defecto) */
+.logo h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 1.8rem; /* Este tamaño es imponente en pantallas grandes */
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1; /* Esto ayuda a que no ocupe espacio vertical de más */
+}
+
+/* Ajuste para móviles (para que no se desborde) */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.5rem; /* Se reduce en móvil para que quepa en una línea */
+  }
+}
+
 /* Responsivo para móviles */
 @media (max-width: 768px) {
   .quienes-grid {
@@ -574,5 +645,71 @@ h3 {
 @media (max-width: 768px) {
   .detalle-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Hamburguesa oculta en escritorio */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  /* Mostrar hamburguesa */
+  .hamburger {
+    display: block;
+  }
+
+  /* Menú oculto por defecto */
+  .main-nav {
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--primary-blue);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .main-nav.active {
+    left: 0;
+  }
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    height: 60px; /* Un poco más compacto en móvil */
+  }
+}
+@media (max-width: 768px) {
+  /* Ocultamos las flechas en móviles */
+  .carousel-controls {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-dots {
+    display: none; /* Opcional: si prefieres que el usuario solo deslice */
   }
 }
