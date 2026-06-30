@@ -2,7 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Detalle de Propiedad</title>
+    <meta
+      name="description"
+      content="Lee aquí los términos del servicio y la política de privacidad de Nelly Villalobos."
+    />
+    <title>Términos y Política de Privacidad - Nelly Villalobos</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +34,7 @@
           <span class="logo-icon"
             ><i class="fa-solid fa-house-chimney"></i
           ></span>
-          <h1>VISTA PROPIEDADES</h1>
+          <h1>Nelly Villalobos</h1>
         </div>
 
         <div class="hamburger">
@@ -41,27 +45,67 @@
 
         <nav class="main-nav">
           <ul>
-            <li><a href="index-01.html">INICIO</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="arriendo-compra.html">Compra o Arrienda</a></li>
             <li><a href="venta.html">Vende tu propiedad</a></li>
-            <li><a href="quienessomos.html">QUIÉNES SOMOS</a></li>
+            <li><a href="quiensoy.html">Quién Soy</a></li>
+            <li><a href="detalle.html">Términos y Condiciones</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="detalle-container container">
-      <div class="detalle-grid">
-        <div class="detalle-imagen">
-          <img id="imagen" src="" alt="Propiedad" />
+<main>
+      <section id="arriendo" class="arriendo-section">
+        <div class="container arriendo-container">
+          <h1>
+            Términos, Condiciones del Servicio y Política de Privacidad
+          </h1>
+          <p class="arriendo-intro">
+            Encuentra casas, departamentos y parcelas disponibles para comprar y
+            arrendar en Copiapó, Caldera y Bahía Inglesa. Usa los filtros para
+            encontrar la propiedad que se ajusta a lo que buscas.
+          </p>
+
+          <ul class="lista-servicios">
+            <li>
+              <strong>Selección rigurosa:</strong> Evaluamos antecedentes
+              comerciales y laborales de cada postulante.
+            </li>
+            <li>
+              <strong>Contratos profesionales:</strong> Redactamos contratos
+              blindados legalmente para tu tranquilidad.
+            </li>
+            <li>
+              <strong>Inventario detallado:</strong> Documentamos el estado de
+              tu propiedad mediante registros fotográficos y escritos.
+            </li>
+            <li>
+              <strong>Gestión de pagos:</strong> Supervisamos la puntualidad en
+              los pagos de arriendo y gastos comunes.
+            </li>
+            <li>
+              <strong>Atención rápida:</strong> Actuamos como puente directo
+              ante cualquier requerimiento de mantención.
+            </li>
+          </ul>
+
+          <div class="quienes-imagen">
+            <img
+              src="imagenes/arriendo.jpg"
+              alt="Equipo de Vista Propiedades"
+            />
+          </div>
+
+          <div class="btn-container">
+            <a href="index-01.html#propiedades" class="btn-primary"
+              >Ir a seleccionar una propiedad</a
+            >
+          </div>
         </div>
-        <div class="detalle-info">
-          <h1 id="titulo"></h1>
-          <p id="precio" class="precio-destacado"></p>
-          <p id="descripcion"></p>
-          <a href="index-01.html" class="btn-primary">Volver al Inicio</a>
-        </div>
-      </div>
+      </section>
+    </main>
+
     </main>
 
     <footer id="contacto" class="main-footer">
@@ -94,6 +138,7 @@
         </p>
       </div>
     </footer>
+
     <a
       href="https://wa.me/569XXXXXXXX?text=Hola!%20Vi%20Vista%20Propiedades%20y%20me%20gustaría%20más%20información"
       class="whatsapp-float"
