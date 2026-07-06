@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3. Inyectar datos y SEO
   if (propiedad) {
     // Título dinámico para pestañas del navegador (SEO)
-    document.title = `${propiedad.titulo} | Vista Propiedades en Atacama`;
+    document.title = `${propiedad.titulo} | Nelly Villalobos Propiedades en Atacama`;
 
     // Inyección de contenido
     document.getElementById("titulo").innerText = propiedad.titulo;

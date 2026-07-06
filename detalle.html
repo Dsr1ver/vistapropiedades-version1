@@ -2,12 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Lee aquí los términos del servicio y la política de privacidad de Nelly Villalobos."
-    />
-    <title>Términos y Política de Privacidad - Nelly Villalobos</title>
+    <title>Detalle de Propiedad</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +26,12 @@
       href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="main-header header-static">
@@ -36,117 +42,31 @@
           ></span>
           <h1>Nelly Villalobos</h1>
         </div>
-
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-
         <nav class="main-nav">
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="arriendo-compra.html">Compra o Arrienda</a></li>
             <li><a href="venta.html">Vende tu propiedad</a></li>
             <li><a href="quiensoy.html">Quién Soy</a></li>
-            <li><a href="detalle.html">Términos y Condiciones</a></li>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
           </ul>
         </nav>
       </div>
     </header>
-<main>
-      <section id="arriendo" class="arriendo-section">
-        <div class="container arriendo-container">
-          <h1>
-            Términos, Condiciones del Servicio y Política de Privacidad
-          </h1>
-          <p class="arriendo-intro">
-            Encuentra casas, departamentos y parcelas disponibles para comprar y
-            arrendar en Copiapó, Caldera y Bahía Inglesa. Usa los filtros para
-            encontrar la propiedad que se ajusta a lo que buscas.
-          </p>
-
-          <ul class="lista-servicios">
-            <li>
-              <strong>Selección rigurosa:</strong> Evaluamos antecedentes
-              comerciales y laborales de cada postulante.
-            </li>
-            <li>
-              <strong>Contratos profesionales:</strong> Redactamos contratos
-              blindados legalmente para tu tranquilidad.
-            </li>
-            <li>
-              <strong>Inventario detallado:</strong> Documentamos el estado de
-              tu propiedad mediante registros fotográficos y escritos.
-            </li>
-            <li>
-              <strong>Gestión de pagos:</strong> Supervisamos la puntualidad en
-              los pagos de arriendo y gastos comunes.
-            </li>
-            <li>
-              <strong>Atención rápida:</strong> Actuamos como puente directo
-              ante cualquier requerimiento de mantención.
-            </li>
-          </ul>
-
-          <div class="quienes-imagen">
-            <img
-              src="imagenes/arriendo.jpg"
-              alt="Equipo de Vista Propiedades"
-            />
-          </div>
-
-          <div class="btn-container">
-            <a href="index-01.html#propiedades" class="btn-primary"
-              >Ir a seleccionar una propiedad</a
-            >
-          </div>
+    <main class="detalle-container container">
+      <div class="detalle-grid">
+        <div class="detalle-imagen">
+          <img id="imagen" src="" alt="Propiedad" />
         </div>
-      </section>
-    </main>
-
-    </main>
-
-    <footer id="contacto" class="main-footer">
-      <div class="container footer-content">
-        <div class="footer-info">
-          <h3>Contacto</h3>
-          <p>
-            <i class="fa-solid fa-location-dot"></i> Calle Ejemplo #123,
-            Copiapó, Chile
-          </p>
-          <p><i class="fa-solid fa-phone"></i> +56 9 XXXX XXXX</p>
-          <p>
-            <i class="fa-solid fa-envelope"></i> contacto@vistapropiedades.cl
-          </p>
-        </div>
-        <div class="footer-form">
-          <h3>Envíanos un mensaje</h3>
-          <form>
-            <input type="text" placeholder="Tu Nombre" required />
-            <input type="email" placeholder="Tu Email" required />
-            <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
-            <button type="submit" class="btn-secondary">Enviar Mensaje</button>
-          </form>
+        <div class="detalle-info">
+          <h1 id="titulo"></h1>
+          <p id="precio" class="precio-destacado"></p>
+          <p id="descripcion"></p>
+          <a href="home.html" class="btn-primary">Volver al Inicio</a>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <p>
-          &copy; 2023 Vista Propiedades. Todos los derechos reservados. | Sitio
-          Estático Optimizado.
-        </p>
-      </div>
-    </footer>
-
-    <a
-      href="https://wa.me/569XXXXXXXX?text=Hola!%20Vi%20Vista%20Propiedades%20y%20me%20gustaría%20más%20información"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-      <span class="whatsapp-text">Contáctanos</span>
-    </a>
+    </main>
     <script src="detalle.js"></script>
   </body>
 </html>
