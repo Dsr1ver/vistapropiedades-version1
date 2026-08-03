@@ -1,4 +1,6 @@
-/* VARIABLES GLOBALES - Temática Azul y Blanco */
+/* ==========================================
+   1. VARIABLES GLOBALES & RESETEO
+   ========================================== */
 :root {
   --primary-red: #800020; /* Rojo Borgoña elegante */
   --secondary-red: #b30026;
@@ -9,14 +11,12 @@
   --transition: all 0.3s ease;
 }
 
-/* RESETEO BÁSICO Y TIPOGRAFÍA */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* estoy probadn con Lexend y Rethink Sans (esta me gusta mas)*/
 body {
   font-family: "Lexend", sans-serif;
   color: var(--black);
@@ -24,18 +24,21 @@ body {
   scroll-behavior: smooth;
   background-color: var(--white);
 }
+
 a {
   text-decoration: none;
   color: inherit;
   transition: var(--transition);
 }
+
 ul {
   list-style: none;
 }
+
 h1,
 h2,
 h3 {
-  font-family: "Rethink Sans", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 700;
   color: var(--secondary-red);
 }
@@ -47,8 +50,9 @@ h3 {
   margin: 0 auto;
 }
 
-/* 1. CABECERA FLOTANTE (Basado en la imagen) */
-/* Header para el Home (Flotante) */
+/* ==========================================
+   2. CABECERA & NAVEGACIÓN
+   ========================================== */
 .main-header {
   position: absolute;
   top: 0;
@@ -61,16 +65,14 @@ h3 {
   transition: var(--transition);
 }
 
-/* Header para otras páginas (Estático y con fondo azul) */
 .header-static {
   position: relative !important;
   background-color: var(--primary-red) !important;
   color: var(--white);
-  border-bottom: 3px solid var(--secondary-red); /* Un borde un poco más marcado */
+  border-bottom: 3px solid var(--secondary-red);
   transition: var(--transition);
 }
 
-/* Ajuste para que el logo se vea bien en fondo azul */
 .header-static .logo h1 {
   color: var(--white);
 }
@@ -84,49 +86,67 @@ h3 {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
-.logo-icon {
-  font-size: 1.5rem;
+
+.logo-link {
+  display: flex;
+  align-items: center;
 }
+
+.logo-img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
 .logo h1 {
-  font-size: 1.5rem;
-  color: var(--white);
+  font-family: "Lexend", sans-serif;
+  font-size: 1.8rem;
   font-weight: 400;
+  color: var(--white);
+  letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .main-nav ul {
   display: flex;
   gap: 30px;
 }
+
 .main-nav a {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-}
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--secondary-blue);
-  border-bottom: 2px solid var(--secondary-blue);
+  color: var(--white);
 }
 
-/* 2. SECCIÓN HERO / BANNER PRINCIPAL (Basado en la imagen) */
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--secondary-red);
+  border-bottom: 2px solid var(--secondary-red);
+}
+
+/* ==========================================
+   3. SECCIÓN HERO / BANNER PRINCIPAL
+   ========================================== */
 .hero-section {
-  background-image: url("imagenes/imagen-hero1.jpeg");
   position: relative;
-  height: 100vh; /* Ocupa todo el alto de la pantalla */
+  height: 100vh;
   background-size: cover;
-  background-position: center center;
-  color: var(--white);
+  background-position: center;
+  background-color: var(--primary-red);
+  background-image: url("imagenes/imagen-hero1.jpeg");
+  transition: background-image 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: var(--white);
 }
 
-/* Superposición oscura sobre la imagen para mejor lectura de texto */
 .hero-section::before {
   content: "";
   position: absolute;
@@ -134,39 +154,28 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Oscurecemos un 50% */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
 }
+
 .hero-text h2 {
   font-size: 3.5rem;
   color: var(--white);
   margin-bottom: 10px;
   font-weight: 700;
 }
+
 .hero-text p {
   font-size: 1.2rem;
   font-weight: 400;
   opacity: 0.9;
 }
-.hero-section {
-  transition: background-image 1s ease-in-out;
-}
 
-.hero-section {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  /* ESTO ES LO QUE SOLUCIONA EL COLOR GRIS: */
-  background-color: var(--primary-blue); /* Color sólido mientras carga */
-  background-image: url("imagenes/imagen-hero1.jpeg"); /* IMAGEN POR DEFECTO */
-  transition: background-image 1s ease-in-out;
-}
-/* Controles y Puntos del Carrusel (Basado en la imagen) */
+/* Controles y Puntos del Carrusel */
 .carousel-controls {
   position: absolute;
   top: 50%;
@@ -177,6 +186,7 @@ h3 {
   justify-content: space-between;
   padding: 0 30px;
 }
+
 .carousel-btn {
   background: transparent;
   border: 2px solid var(--white);
@@ -191,6 +201,7 @@ h3 {
   justify-content: center;
   transition: var(--transition);
 }
+
 .carousel-btn:hover {
   background: var(--white);
   color: var(--black);
@@ -204,6 +215,7 @@ h3 {
   display: flex;
   gap: 10px;
 }
+
 .dot {
   width: 10px;
   height: 10px;
@@ -212,15 +224,19 @@ h3 {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .dot.active {
   background: var(--white);
 }
 
-/* 3. SECCIÓN DE FILTROS Y PROPIEDADES */
+/* ==========================================
+   4. SECCIÓN DE FILTROS Y PROPIEDADES
+   ========================================== */
 .properties-section {
   padding: 80px 0;
   background-color: var(--gray-light);
 }
+
 .filter-controls {
   background: var(--white);
   padding: 30px;
@@ -228,14 +244,17 @@ h3 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
+
 .filter-controls h3 {
   margin-bottom: 15px;
   font-size: 1.2rem;
 }
+
 .filter-group {
   display: flex;
   gap: 20px;
 }
+
 .filter-group select {
   flex: 1;
   padding: 12px;
@@ -251,26 +270,33 @@ h3 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
+
 .property-card {
   background: var(--white);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: var(--transition);
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s ease;
   border: 1px solid #eee;
 }
+
 .property-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .property-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .property-card-content {
   padding: 20px;
 }
+
 .property-type {
   color: var(--secondary-red);
   font-weight: 600;
@@ -278,45 +304,219 @@ h3 {
   font-size: 0.8rem;
   margin-bottom: 5px;
 }
+
 .property-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: rgb(52, 50, 50);
 }
+
 .property-meta {
   font-size: 0.9rem;
   color: var(--gray-medium);
   margin-bottom: 15px;
 }
 
-/* 4. SECCIÓN DE INFO */
+/* ==========================================
+   5. SECCIÓN INFO & PÁGINAS INTERNAS
+   ========================================== */
 .info-section {
   padding: 80px 0;
   background-color: var(--white);
 }
+
 .info-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
 }
+
 .info-image img {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 .info-text h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
 .info-text p {
   margin-bottom: 20px;
   color: var(--gray-medium);
 }
 
-/* 5. FOOTER Y CONTACTO */
+.compra-section,
+.arriendo-section,
+.quienes-section {
+  padding: 80px 0;
+}
+
+.compra-container,
+.arriendo-container {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.compra-intro,
+.arriendo-intro {
+  font-size: 1.1rem;
+  color: var(--gray-medium);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.arriendo-section {
+  background-color: #f4f7f9;
+}
+
+.quienes-section {
+  background-color: var(--white);
+}
+
+.quienes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.quienes-imagen img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas con viñetas personalizadas */
+.lista-servicios {
+  text-align: left;
+  display: inline-block;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.lista-servicios li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.lista-servicios li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-red);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.lista-servicios li strong {
+  color: var(--primary-red);
+}
+
+/* ==========================================
+   6. SECCIÓN DETALLE DE PROPIEDAD
+   ========================================== */
+.detalle-container {
+  padding: 100px 0;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.detalle-desc {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.precio-destacado {
+  font-size: 1.5rem;
+  color: var(--secondary-red);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Ficha técnica */
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  border-top: 1px solid #eaeaea;
+}
+
+.lista-caracteristicas li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-caracteristicas strong {
+  color: var(--primary-red);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.lista-caracteristicas span {
+  color: #444;
+  font-weight: 500;
+}
+
+.detalle-precio-box {
+  background-color: var(--gray-light);
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-left: 4px solid var(--primary-red);
+}
+
+.precio-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.precio-valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+/* ==========================================
+   7. FOOTER & BOTONES
+   ========================================== */
 .main-footer {
-  background-color: var(--primary-red); /* Cambiado a rojo */
+  background-color: var(--primary-red);
   color: var(--white);
   padding: 60px 0 20px;
 }
@@ -338,10 +538,9 @@ h3 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Cambiamos el icono a un tono de contraste suave */
 .footer-info p i {
   margin-right: 10px;
-  color: var(--secondary-red); /* Ahora combina con tu nuevo rojo */
+  color: var(--secondary-red);
 }
 
 .footer-form form {
@@ -355,7 +554,6 @@ h3 {
   padding: 12px;
   border-radius: 4px;
   border: none;
-  /* Fondo ligeramente más oscuro para que el blanco de la letra destaque */
   background: rgba(0, 0, 0, 0.15);
   color: var(--white);
 }
@@ -373,7 +571,7 @@ h3 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* BOTONES GLOBALES */
+/* Botones */
 .btn-primary {
   display: inline-block;
   padding: 12px 30px;
@@ -382,10 +580,14 @@ h3 {
   border-radius: 4px;
   font-weight: 600;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
+
 .btn-primary:hover {
   background-color: var(--secondary-red);
 }
+
 .btn-secondary {
   display: inline-block;
   padding: 12px 30px;
@@ -397,180 +599,28 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
 }
+
 .btn-secondary:hover {
   background-color: var(--white);
-  color: var(--secondary-blue);
-}
-
-@media (max-width: 768px) {
-  .info-content {
-    grid-template-columns: 1fr;
-  }
-  .main-nav ul {
-    display: none;
-  } /* Aquí podrías implementar un menú hamburguesa */
-}
-
-.property-card {
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Contenedor principal de detalle */
-.detalle-container {
-  padding: 100px 0;
-}
-
-.detalle-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 40px;
-  align-items: start;
-}
-
-/* Control de la imagen para que no sea gigante */
-.detalle-imagen img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.detalle-info h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.precio-destacado {
-  font-size: 1.5rem;
-  color: var(--secondary-blue);
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Estilo profesional para la lista */
-.lista-servicios {
-  list-style: none; /* Quitamos los puntos clásicos */
-  margin: 20px 0;
-}
-
-.lista-servicios li {
-  margin-bottom: 15px;
-  padding-left: 25px;
-  position: relative;
-  line-height: 1.5;
-}
-
-/* Agregamos un icono personalizado (check azul) en lugar del punto */
-.lista-servicios li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--secondary-blue);
-  font-weight: bold;
-}
-
-.lista-servicios li strong {
-  color: var(--primary-blue);
-}
-
-/* Estilos para la sección de Compra */
-.compra-section {
-  padding: 80px 0;
-  background-color: var(--white);
-}
-
-.compra-container {
-  max-width: 900px;
-  text-align: center;
-}
-
-.compra-intro {
-  font-size: 1.1rem;
-  color: var(--gray-medium);
-  margin-bottom: 30px;
-  line-height: 1.8;
-}
-
-/* Ajuste de la lista (ya usando tu clase definida antes) */
-.lista-servicios {
-  text-align: left;
-  display: inline-block;
-  list-style: none;
-  margin: 20px 0;
-}
-
-.lista-servicios li {
-  margin-bottom: 15px;
-  padding-left: 30px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.lista-servicios li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--secondary-blue);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.lista-servicios li strong {
-  color: var(--primary-blue);
+  color: var(--primary-red);
 }
 
 .btn-container {
   margin-top: 30px;
 }
 
-/* Estilos para la sección de Arriendo */
-.arriendo-section {
-  padding: 80px 0;
-  background-color: #f4f7f9; /* Un azul muy claro para diferenciarla de Compra */
-}
-
-.arriendo-container {
-  max-width: 900px;
-  text-align: center;
-}
-
-.arriendo-intro {
-  font-size: 1.1rem;
-  color: var(--gray-medium);
-  margin-bottom: 30px;
-  line-height: 1.8;
-}
-
-/* Estilos para Quiénes Somos */
-.quienes-section {
-  padding: 80px 0;
-  background-color: var(--white);
-}
-
-.quienes-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Mitad y mitad */
-  gap: 60px;
-  align-items: center;
-}
-
-.quienes-imagen img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
+/* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
   background-color: #25d366;
   color: white;
-  padding: 10px 20px; /* Más ancho para que quepa el texto */
+  padding: 10px 20px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre el logo y el texto */
+  gap: 10px;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -584,93 +634,17 @@ h3 {
 }
 
 .whatsapp-text {
-  font-family: "Rethink Sans", sans-serif; /* Usamos tu tipografía */
+  font-family: "Rethink Sans", sans-serif;
 }
 
-/* Ajuste del contenedor del logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* Espacio entre el logo y el texto */
-}
-
-/* Tamaño controlado para tu logo */
-.logo-img {
-  height: 55px; /* Ajusta este valor según el tamaño real de tu logo */
-  width: auto;
-  display: block;
-}
-
-/* Asegurar que el título no sea demasiado grande si el logo es alto */
-.logo h1 {
-  font-size: 1.2rem; /* Un poco más pequeño para que no compita con el logo */
-  line-height: 1.2;
-}
-
-/* Opcional: si quieres que el logo sea un enlace que lleve al inicio */
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-/* Estilo para escritorio (por defecto) */
-.logo h1 {
-  font-family: "Poiret One", cursive;
-  font-size: 1.8rem; /* Este tamaño es imponente en pantallas grandes */
-  font-weight: 400;
-  color: var(--white);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  line-height: 1; /* Esto ayuda a que no ocupe espacio vertical de más */
-}
-
-/* Ajuste para móviles (para que no se desborde) */
-@media (max-width: 768px) {
-  .logo h1 {
-    font-size: 1.5rem; /* Se reduce en móvil para que quepa en una línea */
-  }
-}
-
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-  .quienes-grid {
-    grid-template-columns: 1fr;
-  }
-  .quienes-imagen {
-    order: -1;
-  } /* La foto aparece arriba en celulares */
-}
-
-/* Nota: La clase .lista-servicios ya la tienes en el CSS anterior, 
-   así que al usar la misma clase, se verá idéntica y profesional. */
-
-/* Responsividad para móviles */
-@media (max-width: 768px) {
-  .lista-servicios {
-    display: block;
-    text-align: left;
-  }
-}
-
-/* Responsive: Si la pantalla es pequeña, una sola columna */
-@media (max-width: 768px) {
-  .detalle-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-/* Hamburguesa oculta en escritorio */
+/* ==========================================
+   8. MEDIA QUERIES (DISEÑO RESPONSIVE Y HAMBURGUESA A 1303px)
+   ========================================== */
 .hamburger {
   display: none;
   cursor: pointer;
 }
+
 .bar {
   display: block;
   width: 25px;
@@ -680,86 +654,93 @@ h3 {
   transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  /* Mostrar hamburguesa */
+/* El menú hamburguesa se activa ahora desde los 1303px hacia abajo */
+@media (max-width: 1303px) {
   .hamburger {
     display: block;
   }
 
-  /* Menú oculto por defecto */
   .main-nav {
     position: absolute;
     left: -100%;
-    top: 70px;
+    top: 75px;
     flex-direction: column;
-    background-color: var(--primary-blue);
+    background-color: var(--primary-red);
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--secondary-red);
   }
+
   .main-nav.active {
     left: 0;
   }
+
   .main-nav ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 30px 20px;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
   }
 }
 
+/* Ajustes específicos para celulares (tamaños menores a 768px) */
 @media (max-width: 768px) {
   .main-header {
-    height: 60px; /* Un poco más compacto en móvil */
+    height: 60px;
+    padding: 12px 0;
   }
-}
-@media (max-width: 768px) {
-  /* Ocultamos las flechas en móviles */
+
+  .main-nav {
+    top: 60px; /* Alineado al nuevo alto del header móvil */
+  }
+
+  /* Reducción sutil del tamaño de letra del título para que no se salga */
+  .logo h1 {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+  }
+
+  .logo-img {
+    height: 42px; /* Logo ligeramente más compacto en móvil para cuidar espacio vertical */
+  }
+
+  /* Ocultar flechas del hero en móvil */
   .carousel-controls {
     display: none !important;
   }
-}
-@media (max-width: 768px) {
+
   .carousel-dots {
-    display: none; /* Opcional: si prefieres que el usuario solo deslice */
+    display: none;
   }
-}
 
-/* Contenedor principal de detalle */
-.detalle-container {
-  padding: 100px 0;
-}
+  /* Reordenar grillas a 1 sola columna */
+  .info-content,
+  .quienes-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-.detalle-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 40px;
-  align-items: start;
-}
+  .quienes-imagen {
+    order: -1;
+  }
 
-/* Control de la imagen para que no sea gigante */
-.detalle-imagen img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-.detalle-info h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.precio-destacado {
-  font-size: 1.5rem;
-  color: var(--secondary-red);
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Responsive: Si la pantalla es pequeña, una sola columna */
-@media (max-width: 768px) {
   .detalle-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .detalle-container {
+    padding: 40px 0;
   }
 }

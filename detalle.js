@@ -8,6 +8,11 @@ const propiedades = [
     precio: "$150.000.000",
     img: "imagenes/casa1.jpg",
     desc: "Hermosa casa ubicada en el corazón de Copiapó, cercana a servicios y comercio.",
+    ubicacion: "Centro, Copiapó",
+    piezas: 3,
+    banos: 2,
+    patio: "Sí, amplio",
+    estacionamiento: "1 vehículo",
   },
   {
     id: 2,
@@ -17,6 +22,11 @@ const propiedades = [
     precio: "$450.000",
     img: "imagenes/casa2.jpg",
     desc: "Departamento moderno con vista al mar en Caldera. Ideal para disfrutar el verano.",
+    ubicacion: "Costanera, Caldera",
+    piezas: 2,
+    banos: 2,
+    patio: "No (Balcón con vista al mar)",
+    estacionamiento: "1 vehículo",
   },
   {
     id: 3,
@@ -26,6 +36,11 @@ const propiedades = [
     precio: "$80.000.000",
     img: "imagenes/casa3.jpg",
     desc: "Sitio privilegiado en Bahía Inglesa, perfecto para proyecto vacacional.",
+    ubicacion: "Bahía Inglesa",
+    piezas: "N/A (Terreno)",
+    banos: "N/A",
+    patio: "Amplio terreno completo",
+    estacionamiento: "Espacio múltiple",
   },
   {
     id: 4,
@@ -35,6 +50,11 @@ const propiedades = [
     precio: "$380.000",
     img: "imagenes/casa4.jpg",
     desc: "Casa acogedora en sector residencial de Palomar, ideal para familias.",
+    ubicacion: "El Palomar, Copiapó",
+    piezas: 3,
+    banos: 1,
+    patio: "Sí, trasero techado",
+    estacionamiento: "1 vehículo",
   },
   {
     id: 5,
@@ -44,6 +64,11 @@ const propiedades = [
     precio: "$250.000",
     img: "imagenes/casa5.jpg",
     desc: "Cabaña completamente amoblada en el centro de Caldera.",
+    ubicacion: "Centro, Caldera",
+    piezas: 1,
+    banos: 1,
+    patio: "Compartido",
+    estacionamiento: "Sin estacionamiento",
   },
   {
     id: 6,
@@ -53,6 +78,11 @@ const propiedades = [
     precio: "$120.000.000",
     img: "imagenes/casa6.jpg",
     desc: "Excelente oportunidad de inversión en zona de alta plusvalía turística.",
+    ubicacion: "Bahía Inglesa",
+    piezas: "N/A",
+    banos: "N/A",
+    patio: "Sitio eriazo plano",
+    estacionamiento: "Sí",
   },
   {
     id: 7,
@@ -62,6 +92,11 @@ const propiedades = [
     precio: "$120.000.000",
     img: "imagenes/casa7.jpg",
     desc: "Terreno con vista inmejorable, ideal para casa de descanso.",
+    ubicacion: "Bahía Inglesa",
+    piezas: "N/A",
+    banos: "N/A",
+    patio: "Terreno en pendiente suave",
+    estacionamiento: "Sí",
   },
 ];
 
@@ -76,14 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3. Inyectar datos y SEO
   if (propiedad) {
     // Título dinámico para pestañas del navegador (SEO)
-    document.title = `${propiedad.titulo} | Nelly Villalobos Propiedades en Atacama`;
+    document.title = `${propiedad.titulo} | Nelly Villalobos Propiedades`;
 
-    // Inyección de contenido
+    // Inyección de contenido general
     document.getElementById("titulo").innerText = propiedad.titulo;
     document.getElementById("imagen").src = propiedad.img;
     document.getElementById("imagen").alt = propiedad.titulo;
-    document.getElementById("precio").innerText = "Precio: " + propiedad.precio;
     document.getElementById("descripcion").innerText = propiedad.desc;
+    document.getElementById("precio").innerText = propiedad.precio;
+
+    // Inyección de la ficha técnica elegante
+    document.getElementById("det-ubicacion").innerText = propiedad.ubicacion;
+    document.getElementById("det-piezas").innerText = propiedad.piezas;
+    document.getElementById("det-banos").innerText = propiedad.banos;
+    document.getElementById("det-patio").innerText = propiedad.patio;
+    document.getElementById("det-estacionamiento").innerText =
+      propiedad.estacionamiento;
 
     // 4. Datos Estructurados JSON-LD (SEO Profesional)
     const script = document.createElement("script");
@@ -97,12 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
       offers: {
         "@type": "Offer",
         priceCurrency: "CLP",
-        price: propiedad.precio.replace(/[^0-9]/g, ""), // Limpia el precio a solo números
+        price: propiedad.precio.replace(/[^0-9]/g, ""),
       },
     });
     document.head.appendChild(script);
   } else {
-    document.getElementById("detalle-propiedad").innerHTML =
-      "<h1>Propiedad no encontrada</h1>";
+    document.getElementById("detalle-contenido").innerHTML =
+      "<h1>Propiedad no encontrada</h1><p>Lo sentimos, la propiedad que buscas no existe o fue eliminada.</p><a href='home.html' class='btn-primary'>Volver al Inicio</a>";
   }
 });

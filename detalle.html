@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalle de Propiedad</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -20,21 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="main-header header-static">
+     <header class="main-header header-static">
       <div class="container container-header">
         <div class="logo">
           <span class="logo-icon"
@@ -42,6 +29,13 @@
           ></span>
           <h1>Nelly Villalobos</h1>
         </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
         <nav class="main-nav">
           <ul>
             <li><a href="home.html">Home</a></li>
@@ -54,19 +48,48 @@
         </nav>
       </div>
     </header>
+
+
+    <!-- Sección de Detalle Elegante -->
     <main class="detalle-container container">
       <div class="detalle-grid">
+        <!-- Columna Izquierda: Imagen -->
         <div class="detalle-imagen">
           <img id="imagen" src="" alt="Propiedad" />
         </div>
-        <div class="detalle-info">
+
+        <!-- Columna Derecha: Información Estructurada -->
+        <div class="detalle-info" id="detalle-contenido">
           <h1 id="titulo"></h1>
-          <p id="precio" class="precio-destacado"></p>
-          <p id="descripcion"></p>
-          <a href="home.html" class="btn-primary">Volver al Inicio</a>
+          <p id="descripcion" class="detalle-desc"></p>
+
+          <!-- Ficha técnica con viñetas limpias -->
+          <ul class="lista-caracteristicas">
+            <li>
+              <strong>Ubicación:</strong> <span id="det-ubicacion">-</span>
+            </li>
+            <li><strong>Piezas:</strong> <span id="det-piezas">-</span></li>
+            <li><strong>Baños:</strong> <span id="det-banos">-</span></li>
+            <li><strong>Patio:</strong> <span id="det-patio">-</span></li>
+            <li>
+              <strong>Estacionamiento:</strong>
+              <span id="det-estacionamiento">-</span>
+            </li>
+          </ul>
+
+          <!-- Caja de Valor Destacada -->
+          <div class="detalle-precio-box">
+            <span class="precio-label">Valor:</span>
+            <span id="precio" class="precio-valor"></span>
+          </div>
+
+          <div class="detalle-botones">
+            <a href="home.html" class="btn-primary">Volver al Inicio</a>
+          </div>
         </div>
       </div>
     </main>
+
     <script src="detalle.js"></script>
   </body>
 </html>
