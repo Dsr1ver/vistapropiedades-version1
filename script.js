@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 2,
-      titulo: "Departamento Frente al Mar Caldera",
-      tipo: "arriendo",
-      sector: "Caldera",
-      precio: "$450.000",
+      titulo: "Casa Copayapu",
+      tipo: "venta",
+      sector: "Copiapó",
+      precio: "$90.000.000",
       img: "imagenes/casa2.jpg",
     },
     {
