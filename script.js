@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const propiedades = [
     {
       id: 1,
-      titulo: "Casa Sector Centro Copiapó",
+      titulo: "Casa en Caldera con 4 dormitorios y estacionamiento",
       tipo: "venta",
-      sector: "Copiapó",
-      precio: "$150.000.000",
-      img: "imagenes/casa1.jpg",
+      sector: "Caldera",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/caldera/1/casa caldera 1.0.jpg",
     },
     {
       id: 2,

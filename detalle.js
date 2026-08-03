@@ -2,22 +2,23 @@
 const propiedades = [
   {
     id: 1,
-    titulo: "Casa Sector Centro Copiapó",
+    titulo: "Casa en Caldera con 4 Dormitorios y Estacionamiento",
     tipo: "venta",
-    sector: "Copiapó",
-    precio: "$150.000.000",
+    sector: "Caldera",
+    precio: "-",
     // Arreglo de fotos para el slider de esta propiedad
     imagenes: [
-      "imagenes/casa1.jpg",
-      "imagenes/casa2.jpg",
-      "imagenes/casa2.jpg",
+      "imagenes/propiedadesnelly/caldera/1/casa caldera 1.0.jpg",
+      "imagenes/propiedadesnelly/caldera/1/casa caldera 1.1.jpg",
+      "imagenes/propiedadesnelly/caldera/1/casa caldera 1.2.jpg",
+      "imagenes/propiedadesnelly/caldera/1/casa caldera 1.3.jpg",
     ],
-    desc: "Hermosa casa ubicada en el corazón de Copiapó, cercana a servicios y comercio.",
-    ubicacion: "Centro, Copiapó",
+    desc: "Acogedora casa de un piso en la ciudad de Caldera, ubicada en sector tranquilo. La disposición es buena para recibir visitas, pues cuenta con 3 dormitorios a los que se accede desde un pasillo, tiene un baño amplio con ventilación natural y buena iluminación. El living, comedor y cocina están dispuestos en orden para acceder de forma rápida. Cuenta con estacionamiento.",
+    ubicacion: "Caldera",
     piezas: 3,
-    banos: 2,
+    banos: 1,
     patio: "Sí, amplio",
-    estacionamiento: "1 vehículo",
+    estacionamiento: "Sí",
   },
   {
     id: 2,
@@ -165,6 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
           propiedad.imagenes.length;
         actualizarSlider();
       });
+    }
+
+    // --- WHATSAPP DINÁMICO CON LA PROPIEDAD ---
+    const whatsappBtn = document.getElementById("whatsapp-btn");
+    if (whatsappBtn) {
+      // Reemplaza los X con tu número real de teléfono (ej: 56912345678)
+      const telefono = "569XXXXXXXX";
+
+      const tituloPropiedad = propiedad.titulo;
+      const urlPagina = window.location.href;
+
+      const mensaje = `Hola Nelly, me interesa esta propiedad: *${tituloPropiedad}*. Puedes verla aquí: ${urlPagina}`;
+      const mensajeCodificado = encodeURIComponent(mensaje);
+
+      whatsappBtn.href = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
     }
 
     // Datos estructurados SEO
