@@ -1,4 +1,4 @@
-// --- DATOS DE LAS PROPIEDADES ---
+// --- DATOS DE LAS PROPIEDADES (Con múltiples fotos para el slider) ---
 const propiedades = [
   {
     id: 1,
@@ -6,7 +6,12 @@ const propiedades = [
     tipo: "venta",
     sector: "Copiapó",
     precio: "$150.000.000",
-    img: "imagenes/casa1.jpg",
+    // Arreglo de fotos para el slider de esta propiedad
+    imagenes: [
+      "imagenes/casa1.jpg",
+      "imagenes/casa2.jpg",
+      "imagenes/casa2.jpg",
+    ],
     desc: "Hermosa casa ubicada en el corazón de Copiapó, cercana a servicios y comercio.",
     ubicacion: "Centro, Copiapó",
     piezas: 3,
@@ -20,7 +25,7 @@ const propiedades = [
     tipo: "arriendo",
     sector: "Caldera",
     precio: "$450.000",
-    img: "imagenes/casa2.jpg",
+    imagenes: ["imagenes/casa2.jpg", "imagenes/casa2-extra1.jpg"],
     desc: "Departamento moderno con vista al mar en Caldera. Ideal para disfrutar el verano.",
     ubicacion: "Costanera, Caldera",
     piezas: 2,
@@ -34,7 +39,7 @@ const propiedades = [
     tipo: "venta",
     sector: "Bahía Inglesa",
     precio: "$80.000.000",
-    img: "imagenes/casa3.jpg",
+    imagenes: ["imagenes/casa3.jpg"],
     desc: "Sitio privilegiado en Bahía Inglesa, perfecto para proyecto vacacional.",
     ubicacion: "Bahía Inglesa",
     piezas: "N/A (Terreno)",
@@ -48,7 +53,7 @@ const propiedades = [
     tipo: "arriendo",
     sector: "Copiapó",
     precio: "$380.000",
-    img: "imagenes/casa4.jpg",
+    imagenes: ["imagenes/casa4.jpg"],
     desc: "Casa acogedora en sector residencial de Palomar, ideal para familias.",
     ubicacion: "El Palomar, Copiapó",
     piezas: 3,
@@ -62,7 +67,7 @@ const propiedades = [
     tipo: "arriendo",
     sector: "Caldera",
     precio: "$250.000",
-    img: "imagenes/casa5.jpg",
+    imagenes: ["imagenes/casa5.jpg"],
     desc: "Cabaña completamente amoblada en el centro de Caldera.",
     ubicacion: "Centro, Caldera",
     piezas: 1,
@@ -76,7 +81,7 @@ const propiedades = [
     tipo: "venta",
     sector: "Bahía Inglesa",
     precio: "$120.000.000",
-    img: "imagenes/casa6.jpg",
+    imagenes: ["imagenes/casa6.jpg"],
     desc: "Excelente oportunidad de inversión en zona de alta plusvalía turística.",
     ubicacion: "Bahía Inglesa",
     piezas: "N/A",
@@ -90,7 +95,7 @@ const propiedades = [
     tipo: "venta",
     sector: "Bahía Inglesa",
     precio: "$120.000.000",
-    img: "imagenes/casa7.jpg",
+    imagenes: ["imagenes/casa7.jpg"],
     desc: "Terreno con vista inmejorable, ideal para casa de descanso.",
     ubicacion: "Bahía Inglesa",
     piezas: "N/A",
@@ -101,26 +106,19 @@ const propiedades = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Obtener ID de la URL
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get("id"));
-
-  // 2. Buscar propiedad
   const propiedad = propiedades.find((p) => p.id === id);
 
-  // 3. Inyectar datos y SEO
   if (propiedad) {
-    // Título dinámico para pestañas del navegador (SEO)
     document.title = `${propiedad.titulo} | Nelly Villalobos Propiedades`;
 
     // Inyección de contenido general
     document.getElementById("titulo").innerText = propiedad.titulo;
-    document.getElementById("imagen").src = propiedad.img;
-    document.getElementById("imagen").alt = propiedad.titulo;
     document.getElementById("descripcion").innerText = propiedad.desc;
     document.getElementById("precio").innerText = propiedad.precio;
 
-    // Inyección de la ficha técnica elegante
+    // Ficha técnica
     document.getElementById("det-ubicacion").innerText = propiedad.ubicacion;
     document.getElementById("det-piezas").innerText = propiedad.piezas;
     document.getElementById("det-banos").innerText = propiedad.banos;
@@ -128,14 +126,55 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("det-estacionamiento").innerText =
       propiedad.estacionamiento;
 
-    // 4. Datos Estructurados JSON-LD (SEO Profesional)
+    // --- LÓGICA DEL SLIDER MANUAL DE FOTOS ---
+    let indiceActual = 0;
+    const imgElement = document.getElementById("imagen-slider");
+    const btnPrev = document.getElementById("sliderPrev");
+    const btnNext = document.getElementById("sliderNext");
+    const indicadorContador = document.getElementById("slider-counter");
+
+    function actualizarSlider() {
+      imgElement.src = propiedad.imagenes[indiceActual];
+      if (indicadorContador) {
+        indicadorContador.innerText = `${indiceActual + 1} / ${propiedad.imagenes.length}`;
+      }
+
+      // Si solo hay 1 foto, ocultamos las flechas para que no estorben
+      if (propiedad.imagenes.length <= 1) {
+        if (btnPrev) btnPrev.style.display = "none";
+        if (btnNext) btnNext.style.display = "none";
+        if (indicadorContador) indicadorContador.style.display = "none";
+      }
+    }
+
+    // Inicializar primera foto
+    actualizarSlider();
+
+    // Eventos de los botones manuales
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        indiceActual = (indiceActual + 1) % propiedad.imagenes.length;
+        actualizarSlider();
+      });
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        indiceActual =
+          (indiceActual - 1 + propiedad.imagenes.length) %
+          propiedad.imagenes.length;
+        actualizarSlider();
+      });
+    }
+
+    // Datos estructurados SEO
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.text = JSON.stringify({
       "@context": "https://schema.org/",
       "@type": "Product",
       name: propiedad.titulo,
-      image: window.location.origin + "/" + propiedad.img,
+      image: window.location.origin + "/" + propiedad.imagenes[0],
       description: propiedad.desc,
       offers: {
         "@type": "Offer",

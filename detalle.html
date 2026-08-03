@@ -53,9 +53,23 @@
     <!-- Sección de Detalle Elegante -->
     <main class="detalle-container container">
       <div class="detalle-grid">
-        <!-- Columna Izquierda: Imagen -->
-        <div class="detalle-imagen">
-          <img id="imagen" src="" alt="Propiedad" />
+      
+              <!-- Columna Izquierda: Slider de Imágenes -->
+        <div class="detalle-imagen-slider">
+          <div class="slider-container">
+            <img id="imagen-slider" src="" alt="Propiedad" />
+            
+            <!-- Botones de flechas manuales -->
+            <button id="sliderPrev" class="detalle-slider-btn prev-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="sliderNext" class="detalle-slider-btn next-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicador numérico opcional (ej: 1/3) -->
+            <div id="slider-counter" class="slider-counter">1 / 1</div>
+          </div>
         </div>
 
         <!-- Columna Derecha: Información Estructurada -->
