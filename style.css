@@ -329,7 +329,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  align-items: center;
+  align-items: start; /* CORREGIDO: Alinea la imagen arriba junto al título */
 }
 
 .info-image img {
@@ -381,7 +381,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start; /* CORREGIDO: Alinea la imagen arriba junto al título */
 }
 
 .quienes-imagen img {
