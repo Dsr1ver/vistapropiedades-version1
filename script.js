@@ -43,20 +43,82 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 6,
-      titulo: "Sitio Turístico Bahía Inglesa",
+      titulo: "Casa Caldera N°6",
       tipo: "venta",
       sector: "Bahía Inglesa",
       precio: "$120.000.000",
-      img: "imagenes/casa6.jpg",
+      img: "imagenes/propiedadesnelly/caldera/6/10.jpeg",
     },
 
     {
       id: 7,
-      titulo: "Sitio Turístico Bahía Inglesa",
+      titulo: "Casa Caldera N°7",
       tipo: "venta",
       sector: "Bahía Inglesa",
       precio: "$120.000.000",
-      img: "imagenes/casa7.jpg",
+      img: "imagenes/propiedadesnelly/caldera/7/1.jpeg",
+    },
+    {
+      id: 8,
+      titulo: "Casa Esquina Copiapó",
+      tipo: "venta",
+      sector: "Copiapó",
+      precio: "$120.000.000",
+      img: "imagenes/casa1.jpg",
+    },
+
+    {
+      id: 9,
+      titulo: "Casa Lomas de Chamonate",
+      tipo: "venta",
+      sector: "Copiapó",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/copiapó/lomas de chamonate/opcion 2/2.2.png",
+    },
+
+    {
+      id: 10,
+      titulo: "Casa Calderilla N°10",
+      tipo: "venta",
+      sector: "Bahía Inglesa",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/otros sectores/1/1.1.png",
+    },
+
+    {
+      id: 11,
+      titulo: "Valle Fertil N°11",
+      tipo: "venta",
+      sector: "Copiapo",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/otros sectores/2 valle fertil/2.0.jpg",
+    },
+
+    {
+      id: 12,
+      titulo: "San Pedro N°12",
+      tipo: "venta",
+      sector: "Copiapo",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/otros sectores/3 San Pedro casa azul/1.jpeg",
+    },
+
+    {
+      id: 13,
+      titulo: "San Pedro N° 13",
+      tipo: "venta",
+      sector: "Copiapo",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/otros sectores/4 San Pedro parcela con 2 casas/1.jpeg",
+    },
+
+    {
+      id: 14,
+      titulo: "Terreno Bahía N°14",
+      tipo: "venta",
+      sector: "Bahía Inglesa",
+      precio: "$120.000.000",
+      img: "imagenes/propiedadesnelly/bahía inglesa/1/terreno bahia 1.0.jpg",
     },
   ];
 
