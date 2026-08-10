@@ -88,11 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     {
       id: 11,
-      titulo: "Gran casa de dos pisos en arriendo en Caldera.",
+      titulo: "Gran casa de dos pisos en venta en Caldera.",
       tipo: "venta",
       sector: "Otros sectores",
       precio: "$6.000 UF",
-      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/1.png",
+      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/2.jpeg",
     },
 
     {
@@ -241,12 +241,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filtrar() {
+    const tipoSeleccionado = tipoFiltro.value.toLowerCase().trim();
+    const sectorSeleccionado = sectorFiltro.value.toLowerCase().trim();
+
     const filtrado = propiedades.filter((p) => {
-      return (
-        (tipoFiltro.value === "todos" || p.tipo === tipoFiltro.value) &&
-        (sectorFiltro.value === "todos" || p.sector === sectorFiltro.value)
-      );
+      const coincideTipo =
+        tipoSeleccionado === "todos" ||
+        p.tipo.toLowerCase().trim() === tipoSeleccionado;
+      const coincideSector =
+        sectorSeleccionado === "todos" ||
+        p.sector.toLowerCase().trim() === sectorSeleccionado;
+
+      return coincideTipo && coincideSector;
     });
+
     renderizar(filtrado);
   }
 
@@ -270,10 +278,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
 
-  // ... dentro de tu bloque DOMContentLoaded, donde defines updateCarousel:
   function updateCarousel(index) {
     if (hero && backgroundImages[index]) {
-      // Usamos una nueva instancia de Image para "pre-cargar"
       const img = new Image();
       img.src = backgroundImages[index];
       img.onload = () => {
@@ -292,7 +298,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (hero) {
-    // Inicializar primera imagen
     updateCarousel(0);
 
     if (prevBtn)
@@ -313,8 +318,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(nextImage, 5000);
   }
-
-  // (renderizar, filtrar, carrusel, etc.)
 
   // --- NUEVO: LÓGICA MENÚ HAMBURGUESA ---
   const hamburger = document.querySelector(".hamburger");
