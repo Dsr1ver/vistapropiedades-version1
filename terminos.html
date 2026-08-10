@@ -2,12 +2,18 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- CORREGIDO: Se agregó el viewport para que funcione perfecto el responsive en celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Lee aquí los términos del servicio y la política de privacidad de Nelly Villalobos."
     />
     <title>Términos y Política de Privacidad - Nelly Villalobos</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,12 +61,11 @@
         </nav>
       </div>
     </header>
-<main>
+
+    <main>
       <section id="arriendo" class="arriendo-section">
         <div class="container arriendo-container">
-          <h1>
-            Términos, Condiciones del Servicio y Política de Privacidad
-          </h1>
+          <h1>Términos, Condiciones del Servicio y Política de Privacidad</h1>
           <p class="arriendo-intro">
             Encuentra casas, departamentos y parcelas disponibles para comprar y
             arrendar en Copiapó, Caldera y Bahía Inglesa. Usa los filtros para
@@ -90,7 +95,7 @@
             </li>
           </ul>
 
-          <div class="quienes-imagen">
+          <div class="quienes-imagen" style="margin-top: 30px">
             <img
               src="imagenes/extras/arriendo.jpg"
               alt="Equipo de Vista Propiedades"
@@ -106,9 +111,7 @@
       </section>
     </main>
 
-    </main>
-
-  <footer id="contacto" class="main-footer">
+    <footer id="contacto" class="main-footer">
       <div class="container footer-content">
         <div class="footer-info">
           <h3>Contacto</h3>
@@ -121,10 +124,16 @@
         </div>
         <div class="footer-form">
           <h3>Envíame un mensaje</h3>
-          <form>
-            <input type="text" placeholder="Tu Nombre" required />
-            <input type="email" placeholder="Tu Email" required />
-            <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+          <!-- Formulario optimizado también para Netlify en esta página -->
+          <form name="contacto-terminos" method="POST" netlify>
+            <input type="text" name="nombre" placeholder="Tu Nombre" required />
+            <input type="email" name="email" placeholder="Tu Email" required />
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje..."
+              rows="4"
+              required
+            ></textarea>
             <button type="submit" class="btn-secondary">Enviar Mensaje</button>
           </form>
         </div>
@@ -133,6 +142,7 @@
         <p>&copy; 2026 Nelly Villalobos. Todos los derechos reservados.</p>
       </div>
     </footer>
+
     <a
       href="https://wa.me/56992245912?text=Hola!%20Me%20gustaría%20más%20información"
       class="whatsapp-float"
@@ -141,10 +151,8 @@
       <i class="fa-brands fa-whatsapp"></i>
       <span class="whatsapp-text">Contáctame</span>
     </a>
-    <script src="detalle.js"></script>
-   
+
+    <!-- CORREGIDO: Únicamente cargamos script.js para que active el menú hamburguesa sin errores -->
     <script src="script.js"></script>
-
-
   </body>
 </html>
