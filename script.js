@@ -139,6 +139,75 @@ document.addEventListener("DOMContentLoaded", () => {
       precio: "$-",
       img: "imagenes/propiedadesnelly/ventas/caldera/5/5.5.png",
     },
+
+    {
+      id: 17,
+      titulo: "Se vende terreno a 3 minutos de Bahía Inglesa ",
+      tipo: "venta",
+      sector: "Bahía Inglesa",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/bahía inglesa/1/terreno bahia 1.0.jpg",
+    },
+
+    {
+      id: 18,
+      titulo:
+        "Se venden terrenos en sector Chamonate (Lote 8A-18 y Lote 8A-19), cerca de la ciudad de Copiapó.  ",
+      tipo: "venta",
+      sector: "Copiapó",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 1/1.0.jpg.png",
+    },
+
+    {
+      id: 19,
+      titulo:
+        "Se venden terrenos en sector Chamonate (Lote 8A-9 y Lote 8A-10), cerca de la ciudad de Copiapó.  ",
+      tipo: "venta",
+      sector: "Copiapó",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.1.png",
+    },
+
+    {
+      id: 20,
+      titulo:
+        "Se vende casa muy grande y hermosa, ubicada en Calderilla, queda cerca de playas Bahía Inglesa y Loreto sur ",
+      tipo: "venta",
+      sector: "Otros sectores",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/otros sectores/1/1.1.png",
+    },
+
+    {
+      id: 21,
+      titulo:
+        "Se vende parcela en Valle Fértil, a solo 5 minutos de la carretera, tiene piscina y pozo",
+      tipo: "venta",
+      sector: "Otros sectores",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.0.jpg",
+    },
+
+    {
+      id: 22,
+      titulo:
+        "Se vende parcela con casa y piscina en San Pedro, ubicada en la avenida principal",
+      tipo: "venta",
+      sector: "Otros sectores",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/1.jpeg",
+    },
+
+    {
+      id: 23,
+      titulo:
+        "Se vende parcela con 2 casas ubicada en San Pedro de 1,8 hectáreas.",
+      tipo: "venta",
+      sector: "Otros sectores",
+      precio: "$-",
+      img: "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/1.jpeg",
+    },
   ];
 
   // --- ELEMENTOS DEL DOM ---

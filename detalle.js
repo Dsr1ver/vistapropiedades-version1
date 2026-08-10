@@ -329,6 +329,156 @@ const propiedades = [
     patio: "Si",
     estacionamiento: "Sí",
   },
+
+  {
+    id: 17,
+    titulo: "Se vende terreno a 3 minutos de Bahía Inglesa",
+    tipo: "venta",
+    sector: "Bahía Inglesa",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/bahía inglesa/1/terreno bahia 1.0.jpg",
+      "imagenes/propiedadesnelly/ventas/bahía inglesa/1/terreno bahia 1.1.jpg",
+    ],
+    desc: "Terreno ubicado a solo 3 minutos de Bahía Inglesa, tiene un tamaño de 400 m2. Está totalmente cerrado con panderetas. Se encuentra ubicado en sector tranquilo y seguro.",
+    ubicacion: "Bahía Inglesa",
+    piezas: "- ",
+    banos: "-",
+    patio: "-",
+    estacionamiento: "-",
+  },
+
+  {
+    id: 18,
+    titulo:
+      "Se venden terrenos en sector Chamonate (Lote 8A-18 y Lote 8A-19), cerca de la ciudad de Copiapó. ",
+    tipo: "venta",
+    sector: "Copiapó",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 1/1.0.jpg.png",
+      "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 1/1.1.png",
+    ],
+    desc: "Superficie por cada terreno de 5000 m2. Loteo ubicado en la intersección de las Rutas C-327 camino hacia Mina Galleguillos y C-357 camino hacia Cerro Imán. En ambos casos hay factibilidad de acceso a tener electricidad. ",
+    ubicacion: "Copiapó",
+    piezas: "- ",
+    banos: "-",
+    patio: "-",
+    estacionamiento: "-",
+  },
+
+  {
+    id: 19,
+    titulo:
+      "Se venden terrenos en sector Chamonate (Lote 8A-9 y Lote 8A-10), cerca de la ciudad de Copiapó. ",
+    tipo: "venta",
+    sector: "Copiapó",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.1..png",
+      "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.2.png",
+    ],
+    desc: "Superficie Lote 8A-10: 5000m2 y Superficie Lote 8A-9: 6939,19m2. Loteo ubicado en la intersección de las Rutas C-327 camino hacia Mina Galleguillos y C-357 camino hacia Cerro Imán. En ambos casos hay factibilidad de acceso a tener electricidad.",
+    ubicacion: "Copiapó",
+    piezas: "- ",
+    banos: "-",
+    patio: "-",
+    estacionamiento: "-",
+  },
+
+  {
+    id: 20,
+    titulo:
+      "Se vende casa muy grande y hermosa, ubicada en Calderilla, queda cerca de playas Bahía Inglesa y Loreto sur ",
+    tipo: "venta",
+    sector: "Otros sectores",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/1.1.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.0.jpg",
+    ],
+    desc: "Se vende casa de dos pisos muy grande y hermosa, ubicada en Calderilla en un sector tranquilo. Queda cerca de playas Bahía Inglesa y Loreto sur. La casa tiene 6 dormitorios con buena iluminación y de gran tamaño. Tiene 2 baños, living comedor de buen tamaño, cocina y cuenta con 3 estacionamientos. Tiene un patio grande y quincho. ",
+    ubicacion: "Calderilla, cerca de Loreto sur",
+    piezas: "6",
+    banos: "2",
+    patio: "Sí, y Quincho",
+    estacionamiento: "Sí, amplio",
+  },
+
+  {
+    id: 21,
+    titulo:
+      "Se vende parcela en Valle Fértil, a solo 5 minutos de la carretera, tiene piscina y pozo. ",
+    tipo: "venta",
+    sector: "Otros sectores",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.0.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.1.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.2.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.3.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.4.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.5.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/2 valle fertil/2.6.jpg",
+    ],
+    desc: "En venta parcela ubicada en Valle Fértil, a solo 5 minutos de la carretera, cercana al aeropuerto Desierto de Atacama, también al sector de Piedra Colgada. Tiene un radier de 180 m2, piscina, pozo de agua, bomba y fosa instalada para conectar. También tiene árboles como se aprecia en las fotografías.",
+    ubicacion: "Calderilla, cerca de Loreto sur",
+    piezas: "-",
+    banos: "-",
+    patio: "Sí",
+    estacionamiento: "Sí, amplio",
+  },
+
+  {
+    id: 22,
+    titulo:
+      "Se vende parcela con casa y piscina en San Pedro, ubicada en la avenida principal",
+    tipo: "venta",
+    sector: "Otros sectores",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/1.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/2.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/3.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/4.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/5.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/3 San Pedro casa azul/6.jpeg",
+    ],
+    desc: "En venta casa en parcela de 6800 m2, está ubicada en San Pedro, en la avenida principal. Queda cerca del aeropuerto Desierto de Atacama. La casa es sólida, entra mucha luz natural y es amplia, cuenta con 3 dormitorios, 1 baño con ducha, cocina y un gran comedor. Incluye diversos árboles como olivos, membrillo, limonero, almendro, parras, entre otros. También tiene una piscina estructural, sobre una terraza.",
+    ubicacion: "San Pedro",
+    piezas: "3 dormitorios, cocina y gran comedor (además de una piscina)",
+    banos: "1 baño",
+    patio:
+      "Sí, además de muchos árboles como membrillo, limonero, olivos, etc.",
+    estacionamiento: "Sí, amplio",
+  },
+
+  {
+    id: 23,
+    titulo:
+      "Se vende parcela con 2 casas ubicada en San Pedro de 1,8 hectáreas.",
+    tipo: "venta",
+    sector: "Otros sectores",
+    precio: "$-",
+    imagenes: [
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/1.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/2.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/3.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/4.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/5.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/6.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/7.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/8.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/9.jpeg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/10.jpeg",
+    ],
+    desc: "En venta dos casas en parcela de 18000 m2 (1,8 hectáreas), está ubicada en San Pedro. Queda cerca del aeropuerto Desierto de Atacama. Cuenta con agua (pozo) y luz. Una de las casas tiene baño con ducha.",
+    ubicacion: "San Pedro",
+    piezas: "Consultar detalles",
+    banos: "Consultar detalles",
+    patio: "Sí",
+    estacionamiento: "Sí, amplio",
+  },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -397,7 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const whatsappBtn = document.getElementById("whatsapp-btn");
     if (whatsappBtn) {
       // Reemplaza los X con tu número real de teléfono (ej: 56912345678)
-      const telefono = "569XXXXXXXX";
+      const telefono = "56992245912";
 
       const tituloPropiedad = propiedad.titulo;
       const urlPagina = window.location.href;
