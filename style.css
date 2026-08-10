@@ -710,6 +710,19 @@ h3 {
     height: 42px; /* Logo ligeramente más compacto en móvil para cuidar espacio vertical */
   }
 
+  /* CORRECCIÓN DE LOS FILTROS EN MÓVIL */
+  .filter-group {
+    flex-direction: column; /* Coloca un selector debajo del otro */
+    gap: 12px;
+  }
+
+  .filter-group select {
+    width: 100%; /* Ocupa el ancho adecuado sin verse gigante o deforme */
+    max-width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
   /* Ocultar flechas del hero en móvil */
   .carousel-controls {
     display: none !important;
