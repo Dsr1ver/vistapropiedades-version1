@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "arriendo",
       sector: "Caldera",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/arriendos/caldera/2/1.jpeg",
+      img: "imagenes/propiedadesnelly/arriendos/caldera/2/3.jpeg",
     },
     {
       id: 4,
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "arriendo",
       sector: "Otros sectores",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/1.png",
+      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/5.jpeg",
     },
 
     {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Otros sectores",
       precio: "$6.000 UF",
-      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/2.jpeg",
+      img: "imagenes/propiedadesnelly/arriendos/otros sectores/Calderilla/Casa Calderilla 1/1.png",
     },
 
     {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Caldera",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/caldera/1/casa caldera 1.0.jpg",
+      img: "imagenes/propiedadesnelly/ventas/caldera/1/casa caldera 1.1.jpg",
     },
 
     {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Caldera",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/caldera/2 esquina/2.0.jpg",
+      img: "imagenes/propiedadesnelly/ventas/caldera/2 esquina/2.8.jpg",
     },
 
     {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Caldera",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/caldera/3/3.0.jpg",
+      img: "imagenes/propiedadesnelly/ventas/caldera/3/3.1.jpg",
     },
 
     {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Copiapó",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.1.png",
+      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.2.png",
     },
 
     {
@@ -209,6 +209,23 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "imagenes/propiedadesnelly/ventas/otros sectores/4 San Pedro parcela con 2 casas/1.jpeg",
     },
   ];
+
+  // --- LÓGICA DE PREGUNTAS FRECUENTES (FAQ) ---
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    question.addEventListener("click", () => {
+      // Cierra las demás abiertas (opcional, para que solo una esté abierta a la vez)
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+      // Alterna el estado de la pregunta actual
+      item.classList.toggle("active");
+    });
+  });
 
   // --- ELEMENTOS DEL DOM ---
   const contenedor = document.getElementById("lista-propiedades");

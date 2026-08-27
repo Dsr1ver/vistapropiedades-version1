@@ -7,7 +7,6 @@ const propiedades = [
     tipo: "arriendo",
     sector: "Bahía Inglesa",
     precio: "-",
-    // Arreglo de fotos para el slider de esta propiedad
     imagenes: [
       "imagenes/propiedadesnelly/arriendos/bahía inglesa/1/1.png",
       "imagenes/propiedadesnelly/arriendos/bahía inglesa/1/2.jpeg",
@@ -511,6 +510,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function actualizarSlider() {
       imgElement.src = propiedad.imagenes[indiceActual];
+
+      // --- ALT DINÁMICO PARA EL SEO ---
+      imgElement.alt = `${propiedad.titulo} - Imagen ${indiceActual + 1}`;
+
       if (indicadorContador) {
         indicadorContador.innerText = `${indiceActual + 1} / ${propiedad.imagenes.length}`;
       }
@@ -546,7 +549,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- WHATSAPP DINÁMICO CON LA PROPIEDAD ---
     const whatsappBtn = document.getElementById("whatsapp-btn");
     if (whatsappBtn) {
-      // Reemplaza los X con tu número real de teléfono (ej: 56912345678)
       const telefono = "56992245912";
 
       const tituloPropiedad = propiedad.titulo;
