@@ -393,8 +393,12 @@ const propiedades = [
     sector: "Otros sectores",
     precio: "$-",
     imagenes: [
-      "imagenes/propiedadesnelly/ventas/otros sectores/1/1.1.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/1.1.png",
       "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.0.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.1.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.2.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.3.jpg",
+      "imagenes/propiedadesnelly/ventas/otros sectores/1/Casa Grande Calderilla Sur 1.4.jpg",
     ],
     desc: "Se vende casa de dos pisos muy grande y hermosa, ubicada en Calderilla en un sector tranquilo. Queda cerca de playas Bahía Inglesa y Loreto sur. La casa tiene 6 dormitorios con buena iluminación y de gran tamaño. Tiene 2 baños, living comedor de buen tamaño, cocina y cuenta con 3 estacionamientos. Tiene un patio grande y quincho. ",
     ubicacion: "Calderilla, cerca de Loreto sur",
