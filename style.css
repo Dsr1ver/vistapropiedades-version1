@@ -87,6 +87,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-weight: 200;
 }
 
 .logo-link {
@@ -102,8 +103,8 @@ h3 {
 
 .logo h1 {
   font-family: "Lexend", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--white);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -375,6 +376,23 @@ h3 {
 
 .quienes-section {
   background-color: var(--white);
+}
+
+.terminos-section {
+  padding: 80px 0;
+}
+
+.terminos-container {
+  max-width: 900px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.terminos-intro {
+  font-size: 1.1rem;
+  color: var(--gray-medium);
+  margin-bottom: 30px;
+  line-height: 1.8;
 }
 
 .quienes-grid {
