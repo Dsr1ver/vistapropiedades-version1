@@ -725,6 +725,7 @@ h3 {
     height: 42px;
   }
 
+  /* Ajustes para que los filtros de select se vean compactos y ordenados en celular */
   .filter-group {
     flex-direction: column;
     gap: 12px;
@@ -748,8 +749,11 @@ h3 {
     gap: 30px;
   }
 
-  .quienes-imagen {
-    order: -1;
+  /* Imagen de Quién Soy ordenada abajo y reducida en tamaño para móviles */
+  .quienes-grid .quienes-imagen {
+    order: 2;
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   .footer-content {
