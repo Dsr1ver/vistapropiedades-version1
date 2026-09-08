@@ -315,18 +315,15 @@
         <div class="footer-form">
           <h3>Envíame un mensaje</h3>
 
-          <!-- Formulario adaptado para Netlify -->
-          <form name="contacto" method="POST" netlify>
-            <input type="text" name="nombre" placeholder="Tu Nombre" required />
-            <input type="email" name="email" placeholder="Tu Email" required />
-            <textarea
-              name="mensaje"
-              placeholder="Tu mensaje..."
-              rows="4"
-              required
-            ></textarea>
-            <button type="submit" class="btn-secondary">Enviar Mensaje</button>
-          </form>
+        <form name="contacto" method="POST" netlify>
+  <!-- Este campo oculto ayuda a Netlify a filtrar el spam -->
+  <input type="hidden" name="form-name" value="contacto" />
+  
+  <input type="text" name="nombre" placeholder="Tu Nombre" required />
+  <input type="email" name="email" placeholder="Tu Email" required />
+  <textarea name="mensaje" placeholder="Tu mensaje..." rows="4" required></textarea>
+  <button type="submit" class="btn-secondary">Enviar Mensaje</button>
+</form>
         </div>
       </div>
       <div class="container footer-bottom">
