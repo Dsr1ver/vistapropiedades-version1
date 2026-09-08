@@ -65,6 +65,13 @@ h3 {
   transition: var(--transition);
 }
 
+.logo-personalizado {
+  display: flex;
+  align-items: center;
+  height: 55px; /* Altura ideal para que encaje perfecto en tu header rojo */
+  max-width: 280px;
+}
+
 .header-static {
   position: relative !important;
   background-color: var(--primary-red) !important;
@@ -708,12 +715,12 @@ h3 {
 
 @media (max-width: 768px) {
   .main-header {
-    height: 60px;
-    padding: 12px 0;
+    height: auto;
+    padding: 18px 0;
   }
 
   .main-nav {
-    top: 60px;
+    top: 75px;
   }
 
   .logo h1 {
