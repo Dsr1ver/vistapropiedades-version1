@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "arriendo",
       sector: "Bahía Inglesa",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/arriendos/bahía inglesa/1/1.png",
+      img: "imagenes/propiedadesnelly/arriendos/bahiainglesa/2.jpeg",
     },
     {
       id: 2,
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Bahía Inglesa",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/bahía inglesa/1/terreno bahia 1.0.jpg",
+      img: "imagenes/propiedadesnelly/ventas/bahia/1.jpg",
     },
 
     {
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Copiapó",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 1/1.0.jpg.png",
+      img: "imagenes/propiedadesnelly/ventas/copiapo/lomas/opcion1/1.0.jpg.png",
     },
 
     {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tipo: "venta",
       sector: "Copiapó",
       precio: "$-",
-      img: "imagenes/propiedadesnelly/ventas/copiapó/lomas de chamonate/opcion 2/2.2.png",
+      img: "imagenes/propiedadesnelly/ventas/copiapo/lomas/opcion2/2.2.png",
     },
 
     {
